@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Library.Entities
+{
+    public class Reader: BaseEntity
+    {
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public string Patronymic { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Email { get; set; }
+        public string TelephoneNumber { get; set; }
+
+        public virtual ICollection<Deal> Deals { get; set; }
+
+        public Reader()
+        {
+            Deals = new List<Deal>();
+        }
+    }
+}
