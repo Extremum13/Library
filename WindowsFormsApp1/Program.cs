@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.AlphaVersion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Library
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DemoForm());
-        }
+            Application.Run(new BootPageForm());
+        }        
     }
 }

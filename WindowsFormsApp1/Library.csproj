@@ -11,6 +11,22 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>G:\KT2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,12 +47,32 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F18B73CEE1A0D4E2111C417B446A4516AA2D8B90</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Library_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -52,6 +88,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphaVersion\AddAuthorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AddAuthorForm.Designer.cs">
+      <DependentUpon>AddAuthorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\AddBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AddBookForm.Designer.cs">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\AddDealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AddDealForm.Designer.cs">
+      <DependentUpon>AddDealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\AddLibrarianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AddLibrarianForm.Designer.cs">
+      <DependentUpon>AddLibrarianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\AddReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AddReaderForm.Designer.cs">
+      <DependentUpon>AddReaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\BootPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\BootPageForm.Designer.cs">
+      <DependentUpon>BootPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\ChangeReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\ChangeReaderForm.Designer.cs">
+      <DependentUpon>ChangeReaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\ConfirmForm.Designer.cs">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\FindReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\FindReaderForm.Designer.cs">
+      <DependentUpon>FindReaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlphaVersion\ReturnBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlphaVersion\ReturnBookForm.Designer.cs">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DemoVersion\BookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +179,10 @@
     <Compile Include="Migrations\201812052056488_Migration.Designer.cs">
       <DependentUpon>201812052056488_Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812232154418_Migration1.cs" />
+    <Compile Include="Migrations\201812232154418_Migration1.Designer.cs">
+      <DependentUpon>201812232154418_Migration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="Entities\Reader.cs" />
@@ -97,6 +203,40 @@
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\LibrarianRepository.cs" />
     <Compile Include="Repository\ReaderRepository.cs" />
+    <Compile Include="Validation\Validation.cs" />
+    <EmbeddedResource Include="AlphaVersion\AddAuthorForm.resx">
+      <DependentUpon>AddAuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\AddBookForm.resx">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\AddDealForm.resx">
+      <DependentUpon>AddDealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\AddLibrarianForm.resx">
+      <DependentUpon>AddLibrarianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\AddReaderForm.resx">
+      <DependentUpon>AddReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\BootPageForm.resx">
+      <DependentUpon>BootPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\ChangeReaderForm.resx">
+      <DependentUpon>ChangeReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\ConfirmForm.resx">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\FindReaderForm.resx">
+      <DependentUpon>FindReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlphaVersion\ReturnBookForm.resx">
+      <DependentUpon>ReturnBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DemoVersion\BookForm.resx">
       <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +249,9 @@
     <EmbeddedResource Include="Migrations\201812052056488_Migration.resx">
       <DependentUpon>201812052056488_Migration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812232154418_Migration1.resx">
+      <DependentUpon>201812232154418_Migration1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -119,6 +262,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Library_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Library.Entities.Author.datasource" />
     <None Include="Properties\DataSources\Library.Entities.BaseEntity.datasource" />
@@ -154,6 +298,17 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

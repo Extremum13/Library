@@ -14,6 +14,10 @@ namespace Library.Repository
 
         }
 
-
+        public List<Librarian> FindBySurname(string surname)
+        {
+            List<Librarian> librarians = _db.Librarians.Where(r => r.Surname.ToUpper().Contains(surname.ToUpper())).ToList();
+            return librarians;
+        }
     }
 }

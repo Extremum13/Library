@@ -23,5 +23,11 @@ namespace Library.Repository
             List<Reader> readers = _db.Readers.Where(r => r.Deals.Any(d => d.BookCopyInDeals.Any(bcd => bcd.BookCopy.BookId.Equals(bookId)))).ToList();
             return readers;
         }
+
+        public List<Reader> FindBySurname(string surname)
+        {
+            List<Reader> readers = _db.Readers.Where(r => r.Surname.ToUpper().Contains(surname.ToUpper())).ToList();
+            return readers;
+        }
     }
 }

@@ -14,6 +14,11 @@ namespace Library.Repository
 
         }
 
+        public List<Deal> GetDealsByReaderId(int readerId)
+        {
+            List<Deal> deals = _db.Deals.Where(d => d.ReaderId.Value.Equals(readerId)).ToList();
+            return deals;
+        }
 
     }
 }
